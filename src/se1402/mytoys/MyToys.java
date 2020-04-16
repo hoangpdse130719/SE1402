@@ -11,16 +11,19 @@ package se1402.mytoys;
  */
 public class MyToys {
 
-    public static String Xl(int n) {
-        if (n==0) {
-            return "NGU";
+    public static long cF(int n) {
+        if (n < 0 || n > 15) {
+            throw new IllegalArgumentException("Sorry, n must be >=0");
         }
-        if (n>0&&n<=5) {
-            return "TRUNGBINH";
-        }if (n>5&&n<=10) {
-            return "GIOI";
+        if (n == 0) {
+            return 1;
         }
-        return "Please try again";
+        long product = 1;
+        for (int i = 1; i <= n; i++) {
+            product *= i;
+        }
+        return product;
+
     }
 
 }
