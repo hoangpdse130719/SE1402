@@ -19,7 +19,7 @@ public class MyToyTest {
     public void testSucessfullCases() {
         assertEquals(1, MyToys.cF(0));
         assertEquals(2, MyToys.cF(2));
-        assertEquals(63, MyToys.cF(3));
+        assertEquals(6, MyToys.cF(3));
         assertEquals(24, MyToys.cF(4));
         assertEquals(120, MyToys.cF(5));
         assertEquals(720, MyToys.cF(6));
