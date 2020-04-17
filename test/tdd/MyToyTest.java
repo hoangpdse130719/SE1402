@@ -16,7 +16,7 @@ import se1402.mytoys.MyToys;
 public class MyToyTest {
     
    @Test
-    public void testSucessfullCases() {
+    public void testSucessfulLowr10Cases() {
         assertEquals(1, MyToys.cF(0));
         assertEquals(2, MyToys.cF(2));
         assertEquals(6, MyToys.cF(3));
@@ -24,10 +24,21 @@ public class MyToyTest {
         assertEquals(120, MyToys.cF(5));
         assertEquals(720, MyToys.cF(6));
     }
+    @Test
+    public void testSucessfulGreater10Cases() {
+        assertEquals(3628800, MyToys.cF(10));
+
+    }
     @Test(expected = IllegalArgumentException.class)
-    public void testExceptionCases(){
+    public void testExceptionNegativeCases(){
         MyToys.cF(-5);
-        MyToys.cF(100);
+        MyToys.cF(-100);
+        MyToys.cF(-1);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void testExceptionUpperBoundCases(){ // >15
+        MyToys.cF(16);
+        MyToys.cF(100);
+    }
 }
