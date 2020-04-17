@@ -17,7 +17,7 @@ public class MyToyTest {
     
    @Test
     public void testSucessfulLowr10Cases() {
-        assertEquals(1, MyToys.cF(0));
+        assertEquals(10, MyToys.cF(0));
         assertEquals(2, MyToys.cF(2));
         assertEquals(6, MyToys.cF(3));
         assertEquals(24, MyToys.cF(4));
