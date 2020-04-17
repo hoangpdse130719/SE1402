@@ -22,6 +22,8 @@ public class SE1402 {
         System.out.println("6! =" + MyToys.cF(6));
         System.out.println("0! =" + MyToys.cF(0));
         System.out.println("Exception: " + MyToys.cF(-5));
+            //stack over flow
+//            MyToys.cF(-5);
     }
 
 }
